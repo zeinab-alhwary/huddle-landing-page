@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+$Very-Pale-Cyan: hsl(193, 100%, 96%);
+$Very-Dark-Cyan: hsl(192, 100%, 9%);
+$Grayish-Blue: hsl(208, 11%, 55%);
+$Pink: hsl(322, 100%, 66%);
+
+@mixin font($fontWeight,$fontSize)
+{
+  font-family: "Open Sans", sans-serif;
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+}
+
+body{
+  margin: 0;
+}

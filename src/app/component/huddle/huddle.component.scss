@@ -1,0 +1,88 @@
+@import '../../../styles.scss';
+
+.huddle-container
+{
+  margin: 0;
+  background-image: url('../../../assets/images/bg-hero-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 50px;
+  background-color: $Very-Pale-Cyan;
+
+
+  .head{
+    display: flex;
+    justify-content: space-between;
+  .btn-head{
+    padding:15px 60px ;
+    border: none;
+    border-radius: 30px;
+    background-color: white;
+    color: $Very-Dark-Cyan;
+    box-shadow: 0 2px 6px  $Grayish-Blue;
+  }
+  .btn-head:hover{
+    cursor: pointer;
+  }
+  }
+  .huddle-info{
+    display: flex;
+    margin-top: 60px;
+     gap: 50px;
+    // justify-content: space-between;
+
+    .info{
+
+      .address{
+        @include font($fontWeight:700,$fontSize:35px)
+      }
+      .text{
+        @include font($fontWeight:400,$fontSize:18px)
+
+      }
+      .btn-info{
+        padding:15px 60px ;
+    border: none;
+    border-radius: 30px;
+    background-color: $Pink;
+    color: white;
+    box-shadow: 0 2px 6px  $Grayish-Blue;
+      }
+      .btn-info:hover{
+        cursor: pointer;
+        background-color: rgba($color: $Pink, $alpha: 0.9);
+      }
+    }
+     .mockups{
+      max-height: 500px;
+     }
+  }
+
+}
+@media only screen and (max-width: 600px) {
+  .huddle-container{
+    background-image: url('../../../assets/images/bg-hero-mobile.svg');
+    width: fit-content;
+    text-align: center;
+
+  }
+  .huddle-info{
+
+    flex-wrap: wrap;
+    width: fit-content;
+    text-align: center;
+     .info{
+      width: 100%;
+      .btn-info{
+        width: 50%;
+
+      }
+     }
+    .mockups{
+      max-height: 100px;
+     }
+  }
+
+}
+
+
