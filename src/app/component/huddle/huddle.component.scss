@@ -19,68 +19,83 @@
     border-radius: 30px;
     background-color: white;
     color: $Very-Dark-Cyan;
-    box-shadow: 0 2px 6px  $Grayish-Blue;
-  }
-  .btn-head:hover{
-    cursor: pointer;
+    box-shadow: 0 2px 6px rgba($color:$Grayish-Blue , $alpha: 0.61) ;
+    &:hover{
+      cursor: pointer;
+    }
   }
   }
   .huddle-info{
     display: flex;
     margin-top: 60px;
-     gap: 50px;
-    // justify-content: space-between;
+    gap: 35px;
+    align-items: center;
+    justify-content: space-between;
 
     .info{
 
       .address{
-        @include font($fontWeight:700,$fontSize:35px)
+        @include font($fontWeight:700,$fontSize:clamp(20px, 30px, 40px));
+        color: $Very-Dark-Cyan;
+        margin-block-end: 24px;
       }
       .text{
-        @include font($fontWeight:400,$fontSize:18px)
-
+        @include font($fontWeight:400,$fontSize:clamp(12px,16px, 20px));
+        color:$Very-Dark-Cyan;
+        margin-block-end: 24px;
       }
       .btn-info{
-        padding:15px 60px ;
+    padding:15px 60px ;
     border: none;
     border-radius: 30px;
     background-color: $Pink;
     color: white;
-    box-shadow: 0 2px 6px  $Grayish-Blue;
-      }
-      .btn-info:hover{
-        cursor: pointer;
-        background-color: rgba($color: $Pink, $alpha: 0.9);
+    box-shadow: 0 2px 6px  $Pink;
+    &:hover{
+      cursor: pointer;
+      background-color: rgba($color: $Pink, $alpha: 0.9);
+    }
       }
     }
      .mockups{
-      max-height: 500px;
+      max-width: 50%;
      }
   }
 
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .huddle-container{
     background-image: url('../../../assets/images/bg-hero-mobile.svg');
     width: fit-content;
     text-align: center;
+    padding:12px;
 
-  }
-  .huddle-info{
-
-    flex-wrap: wrap;
-    width: fit-content;
-    text-align: center;
-     .info{
-      width: 100%;
-      .btn-info{
-        width: 50%;
-
+    .head{
+      .huddle-logo{
+        width: 120px;
+        object-fit: contain;
       }
-     }
-    .mockups{
-      max-height: 100px;
-     }
+      .btn-head{
+        padding: 10px 40px;
+      }
+    }
+
+    .huddle-info{
+      flex-wrap: wrap;
+      justify-content: center;
+      gap:20px;
+
+       .info{
+        width: 100%;
+        .btn-info{
+          width: 50%;
+
+        }
+       }
+      .mockups{
+        max-width: 80%;
+       }
+    }
   }
 
 }
