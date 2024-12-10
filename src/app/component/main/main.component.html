@@ -1,0 +1,13 @@
+<main class="cards-container" >
+  <div class="card-container" *ngFor="let card of cards">
+    <div class="card-info">
+    <h2 class="card-title">{{card.title}}</h2>
+    <p class="card-description">{{card.description}}</p>
+  </div>
+    <img src={{card.image}} class="card-image">
+  </div>
+  <div class="aske-card">
+    <h3 class="aske-title">Ready To Build Your Community?</h3>
+    <button class="aske-btn">Get Started For Free</button>
+  </div>
+</main>
