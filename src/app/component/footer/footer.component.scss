@@ -7,14 +7,12 @@ footer{
   padding: 100px 20px;
   color:rgba($color:$Very-Pale-Cyan , $alpha: 0.8) ;
   margin-top: -50px;
-
   @include font($fontWeight:400,$fontSize:15px);
 
   .details{
     margin-right: 30px;
     .logo{
       filter: brightness(0) saturate(100%) invert(97%) sepia(86%) saturate(3937%) hue-rotate(177deg) brightness(104%) contrast(119%);
-
 
     }
     .way-connect{
@@ -55,39 +53,15 @@ footer{
 }
 }
 }
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:800px) {
+
   footer{
-    flex-wrap: wrap;
-    margin-top: -60px;
-    font-size: 13px;
-    padding-inline: 0;
-
-    .details{
-      margin-right: 0;
-      padding: 0;
-      min-width:300px;
-      .logo{
-        width: 120px;
-      object-fit: contain;
-      }
-
-      .way-connect{
-        flex-wrap: wrap;
-      }
-    }
-    .info-about-me{
-       padding-left: 40px;
-      min-width: 300px;
-      li{
-        margin-block: 30px;
-      }
-    }
+    flex-direction: column;
+    align-items: flex-start;
     .icons{
      align-items: center;
-     justify-content: center;
+     align-self: center;
       gap: 20px;
-
-
     }
   }
 }
